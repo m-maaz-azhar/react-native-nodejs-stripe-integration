@@ -5,14 +5,13 @@ const app = express();
 app.use(express.json());
 
 const Stripe = require("stripe")(
-  "sk_test_51L03C8C28HUvnWbWqZaNuxlKABY7D6TUu40Y5oBZmvpnnRSJrNB1M73ubsq8bDkouGvsHEtuFa184yH1PMPSfmiz00N8sQCrrq"
+  ""
 );
 
 app.post("/payment-sheet", async (req, res) => {
   // Use an existing Customer ID if this is a returning customer.
   let customer = {};
   let price = req.body.item.price;
-  console.log("===>+ ", price);
   let paymentMethods = {};
 
   let paymentIntent = {};
@@ -78,7 +77,7 @@ app.post("/payment-sheet", async (req, res) => {
     ephemeralKey: ephemeralKey.secret,
     customer: customer.id,
     publishableKey:
-      "pk_test_51L03C8C28HUvnWbWeK51fhEx6fGXK1vLSFos0KPMOBYn1xNRZsM4OsVZnazO0k2fYQKEjmFOa1P5Tz2qLKLVGBPn00c6D6yvbf",
+      "",
   });
 });
 
