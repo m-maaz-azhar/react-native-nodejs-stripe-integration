@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <StripeProvider
-      publishableKey="pk_test_51L03C8C28HUvnWbWeK51fhEx6fGXK1vLSFos0KPMOBYn1xNRZsM4OsVZnazO0k2fYQKEjmFOa1P5Tz2qLKLVGBPn00c6D6yvbf"
+      publishableKey=""
       urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
       merchantIdentifier="merchant.com.payment_integration" // required for Apple Pay
     >
